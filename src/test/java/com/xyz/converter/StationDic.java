@@ -36,13 +36,13 @@ public class StationDic {
     @ExcelField(title = "经纬度")
     private String latLng;
     /**
-     * 最近的找油站点id
+     * 最近的站点id
      */
     @JsonPath(path = {"$.nearest_stations[?(@.station_type=='1')]", "$[0].station_id"})
     @ExcelField(title = "距离最近的找油站点id")
     private String zyStationId;
     /**
-     * 最近的找油站点名称
+     * 最近的站点名称
      */
     @JsonPath(path = {"$.nearest_stations[?(@.station_type=='1')]", "$[0].station_name"})
     @ExcelField(title = "距离最近的找油站点名称")

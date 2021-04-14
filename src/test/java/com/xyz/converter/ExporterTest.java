@@ -10,11 +10,10 @@ import java.io.File;
  */
 class ExporterTest {
 
-
     public static void main(String[] args) {
         String importPath = System.getProperty("user.dir") + File.separator + "doc" + File.separator + "czb.txt";
         System.out.println("method: main, param: outPath= " + importPath);
-        String exportPath = "/Users/mark/Documents/test/车主邦站点1.xlsx";
+        String exportPath = "/Users/mark/Documents/test/站点1.xlsx";
         new Exporter().toExcelFromFilePath(importPath, StationDic.class, exportPath);
     }
 
