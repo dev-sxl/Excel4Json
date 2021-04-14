@@ -1,5 +1,6 @@
 package com.xyz.extracter;
 
+import com.jayway.jsonpath.JsonPath;
 import com.xyz.utils.JsonUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,7 +21,7 @@ public class Extracter {
 
             Object result = null;
             try {
-                result = com.jayway.jsonpath.JsonPath.read(str, jsonPath);
+                result = JsonPath.read(str, jsonPath);
             } catch (Exception e) {
                 //    导出数据中会为空,配置错误
             }

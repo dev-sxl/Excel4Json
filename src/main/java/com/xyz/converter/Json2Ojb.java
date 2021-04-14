@@ -4,6 +4,7 @@ import com.xyz.bean.ClassCtx;
 import com.xyz.bean.FieldCtx;
 import com.xyz.extracter.Extracter;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,7 +36,7 @@ public class Json2Ojb {
                 return;
             }
             String value = Extracter.extractByPaths(jsonText, jsonPath);
-            if (org.apache.commons.lang3.StringUtils.isNotBlank(value)) {
+            if (StringUtils.isNotBlank(value)) {
                 try {
                     fieldCtx.getField().set(instance, value);
                 } catch (IllegalAccessException e) {
