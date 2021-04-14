@@ -32,7 +32,7 @@ public class Extracter {
     }
 
     public static <T> List<T> extractListByPath(String jsonText, String jsonPath, Class<T> tClass) {
-        return JsonUtils.extraListByPath(jsonText, "$[*]", tClass);
+        return JsonUtils.extraListByPath(jsonText, jsonPath, tClass);
     }
 
 
